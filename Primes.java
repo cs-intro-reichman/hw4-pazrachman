@@ -21,7 +21,7 @@ public class Primes {
         for (int i = 2; i < isPrime.length; i++) {
             if (isPrime[i]) {
                 count++;
-                System.out.println(i);
+                System.out.println(" " + i);
             }
 
         }
