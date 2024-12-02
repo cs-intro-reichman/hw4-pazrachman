@@ -19,7 +19,14 @@ public class MyString {
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
         // Replace the following statement with your code
-        return null;
+        String strTemp = " ";
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z' || (str.charAt(i) == ' '))) {
+                strTemp += ch;
+            }
+        }
+        return strTemp;
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
