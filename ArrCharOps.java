@@ -182,22 +182,22 @@ public class ArrCharOps {
      * - "hello" is equal to "hello".
      * - "date" is greater than "dark" because 't' comes after 'k'.
      * 
-     * @param str1 the first string to compare
-     * @param str2 the second string to compare
-     * @return -1 if str1 is lexicographically less than str2,
-     *         zero if they are equal, and 1 if str1 is
+     * @param sentences the first string to compare
+     * @param str2      the second string to compare
+     * @return -1 if sentences is lexicographically less than str2,
+     *         zero if they are equal, and 1 if sentences is
      *         lexicographically greater than str2.
      *         return -2 if there is an error with the input.
      */
-    public static int compareTo(String str1, String str2) {
-        if (str1.length() == 0 || str2.length() == 0) {
+    public static int compareTo(String sentences, String str2) {
+        if (sentences.length() == 0 || str2.length() == 0) {
             return -2;
         }
-        int length1 = str1.length();
+        int length1 = sentences.length();
         int length2 = str2.length();
 
         for (int i = 0; i < Math.min(length2, length1); i++) {
-            char ch1 = str1.charAt(i);
+            char ch1 = sentences.charAt(i);
             char ch2 = str2.charAt(i);
             if (ch2 > ch1) {
                 return -1;

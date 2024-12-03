@@ -31,27 +31,27 @@ public class MyString {
         return strTemp;
     }
 
-    /** If str1 contains str2, returns true; otherwise returns false. */
-    public static boolean contains(String str1, String str2) {
+    /** If sentences contains str2, returns true; otherwise returns false. */
+    public static boolean contains(String sentences, String str2) {
         // Replace the following statement with your code
-        str1 = lowerCase(str1);
+        sentences = lowerCase(sentences);
         str2 = lowerCase(str2);
 
-        if (str1.length() == 0) {
+        if (sentences.length() == 0) {
             return false;
         }
 
         if (str2.length() == 0) {
             return true;
         }
-        if (str2.length() > str1.length()) {
+        if (str2.length() > sentences.length()) {
             return false;
         }
 
-        for (int i = 0; i < str1.length() - str2.length(); i++) {
+        for (int i = 0; i < sentences.length() - str2.length(); i++) {
             boolean match = true;
             for (int j = 0; j < str2.length(); j++) {
-                if (str1.charAt(j + i) != str2.charAt(j)) {
+                if (sentences.charAt(j + i) != str2.charAt(j)) {
                     match = false;
                     break;
                 }
