@@ -50,7 +50,7 @@ public class ArrCharOps {
      * returns true; Otherwise returns false.
      */
     public static boolean equals(char[] arr1, char[] arr2) {
-        if (arr1.length != arr2.length) {
+        if (arr1.length != arr2.length) { // if lenghts are not equle arr not equls
             return false;
         }
 
@@ -69,7 +69,7 @@ public class ArrCharOps {
      */
     public static int indexOf(char[] arr, char ch) {
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == ch) {
+            if (arr[i] == ch) { // arr[i] = ch is the first occurance
                 return i;
             }
         }
