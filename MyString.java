@@ -37,6 +37,10 @@ public class MyString {
         str1 = lowerCase(str1);
         str2 = lowerCase(str2);
 
+        if (str1.length() == 0) {
+            return false;
+        }
+
         if (str2.length() == 0) {
             return true;
         }
@@ -44,10 +48,10 @@ public class MyString {
             return false;
         }
 
-        for (int j = 0; j <= str1.length() - str2.length(); j++) {
+        for (int i = 0; i < str1.length() - str2.length(); i++) {
             boolean match = true;
-            for (int i = 0; i < str2.length(); i++) {
-                if (str1.charAt(j + i) != str2.charAt(i)) {
+            for (int j = 0; j < str2.length(); j++) {
+                if (str1.charAt(j + i) != str2.charAt(j)) {
                     match = false;
                     break;
                 }
